@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Quicksand:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-pixel: "Press Start 2P", system-ui;
+  --font-sans: "Quicksand", sans-serif;
+  
+  --color-beige-dark: #EBDEB7;
+  --color-beige-light: #F5F5DC;
+  --color-brown-main: #8B4513;
+  --color-brown-dark: #5D4037;
+  --color-plant-green: #4CAF50;
+  --color-plant-dark: #2E7D32;
+  --color-warm-accent: #FFCC80;
+}
+
+body {
+  background-color: var(--color-beige-light);
+  color: var(--color-brown-dark);
+  font-family: var(--font-sans);
+  overflow: hidden;
+}
+
+.pixel-border {
+  border: 4px solid var(--color-brown-main);
+  box-shadow: 
+    0 4px 0 0 rgba(0,0,0,0.1),
+    inset 0 4px 0 0 rgba(255,255,255,0.2);
+}
+
+.pixel-button {
+  background: var(--color-brown-main);
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  font-family: var(--font-pixel);
+  font-size: 10px;
+  cursor: pointer;
+  transition: transform 0.1s;
+  image-rendering: pixelated;
+  border-bottom: 4px solid var(--color-brown-dark);
+}
+
+.pixel-button:active {
+  transform: translateY(2px);
+  border-bottom-width: 2px;
+}
